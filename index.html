@@ -20,10 +20,6 @@
                 rep4
             </li>
 
-            <p>
-                rep5
-            </p>
-
         </ul>
     </div>
 
@@ -62,4 +58,86 @@ git restore Nbr Archivo
 git restore --source id commit Nbr Archivo
 
 
+
+clase 3 de github
+
+git log --oneline
+29b61e4 (HEAD, main) añadi dos <li>
+22cd79e (origin/main, origin/HEAD) creando html
+git checkout main 
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+(use "git push" to publish your local commits)
+ git add .
+ git commit -m "rep3"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+ git status -s
+ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git add .
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git commit -m "rep3"
+[main 3571937] rep3
+ 1 file changed, 4 insertions(+)
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git add .
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git commit -m "rep4" 
+[main a620008] rep4
+ 1 file changed, 4 insertions(+)
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git add . 
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git commit -m "rep5"
+[main 5dab057] rep5
+ 1 file changed, 4 insertions(+)
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git log --oneline
+5dab057 (HEAD -> main) rep5
+a620008 rep4
+3571937 rep3
+29b61e4 añadi dos <li>
+22cd79e (origin/main, origin/HEAD) creando html
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git checkout 3571937
+Note: switching to '3571937'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 3571937 rep3
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git log --oneline
+3571937 (HEAD) rep3
+29b61e4 añadi dos <li>
+22cd79e (origin/main, origin/HEAD) creando html
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git checkout 5dab057
+Previous HEAD position was 3571937 rep3
+HEAD is now at 5dab057 rep5
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git log --oneline
+5dab057 (HEAD, main) rep5
+a620008 rep4
+3571937 rep3
+29b61e4 añadi dos <li>
+22cd79e (origin/main, origin/HEAD) creando html
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git add .
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git restore --staged index.html
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git status -s
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git status -s
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git status -s
+ M index.html
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git restore index.html
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git restore --source a620008 index.html 
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> 
 -->
