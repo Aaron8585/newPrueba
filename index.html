@@ -6,7 +6,15 @@
     <title>titulo</title>
 </head>
 <body>
-    
+    <div>
+        <ul>
+            <li>
+                Texto 1
+            </li>
+
+        </ul>
+    </div>
+
 </body>
 </html>
 
@@ -19,9 +27,27 @@
  -->
 
 <!-- 
-git init
-git add .
-git commit -m "index.html creando titulo"
-git log --oneline
+git init. inicia seguimiento
+git add .  selecciona que archivo se quiere seguir 
+git commit -m "index.html creando titulo". añade un cambio y termina seguimiento
+git log. detalles del repositorio
+git log --oneline. resume el git log
+git remote add origin https://github.com/Aaron8585/probandoGitHub.git. añade un nuevo repositorio remoto nuevo 
+git remote set-url  origin https://github.com/Aaron8585/newPrueba.git. para cambiar la url de un proyecto clonado
+git push -u origin master. para añadir los cambios al nuevo repositorio
+
+git restore 
+-> volver archivos del Staging al Working 
+
+git restore -S -W Nbr Archivo
+git restore --Staged --Working Nbr Archivo
+
+-> Para restaurar un cambio en el Working
+
+git restore Nbr Archivo
+
+->Restaurar un archivo a la version  de un commit anterior
+git restore --source id commit Nbr Archivo
+
 
 -->
