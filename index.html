@@ -20,6 +20,10 @@
                 rep4
             </li>
 
+            <li>
+              rep6
+            </li>
+
         </ul>
     </div>
 
@@ -58,24 +62,19 @@ git restore Nbr Archivo
 git restore --source id commit Nbr Archivo
 
 
-
-clase 3 de github
-
-git log --oneline
-29b61e4 (HEAD, main) añadi dos <li>
-22cd79e (origin/main, origin/HEAD) creando html
-git checkout main 
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git checkout main 
 Switched to branch 'main'
 Your branch is ahead of 'origin/main' by 1 commit.
-(use "git push" to publish your local commits)
- git add .
- git commit -m "rep3"
+  (use "git push" to publish your local commits)
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git add .
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git commit -m "rep3"
 On branch main
 Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
 
- git status -s
- git status
+nothing to commit, working tree clean
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git status -s
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git status
 On branch main
 Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
@@ -138,6 +137,72 @@ PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git status -s
 PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git status -s
  M index.html
 PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git restore index.html
-PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git restore --source a620008 index.html 
-PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> 
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git restore --source a620008 index.html
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git add .
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git commit -m "rep5"
+[detached HEAD 0c56fe7] rep5
+ 3 files changed, 89 insertions(+), 4 deletions(-)
+ create mode 100644 main.js
+ create mode 100644 style.css
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git log --oneline
+0c56fe7 (HEAD) rep5
+5dab057 (main) rep5
+a620008 rep4
+3571937 rep3
+29b61e4 añadi dos <li>
+22cd79e (origin/main, origin/HEAD) creando html
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git reset soft 0c56fe7
+fatal: ambiguous argument 'soft': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git reset --soft 0c56fe7
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git log --oneline
+0c56fe7 (HEAD) rep5
+5dab057 (main) rep5
+a620008 rep4
+3571937 rep3
+29b61e4 añadi dos <li>
+22cd79e (origin/main, origin/HEAD) creando html
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git reset --soft a620008
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git log --oneline
+a620008 (HEAD) rep4
+3571937 rep3
+29b61e4 añadi dos <li>
+22cd79e (origin/main, origin/HEAD) creando html
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> reset --hard  a620008
+Parámetros no válidos
+RESET { SESSION }
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git reset --hard a620008
+HEAD is now at a620008 rep4
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git reset --hard 0c56fe7
+HEAD is now at 0c56fe7 rep5
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git reflow 
+git: 'reflow' is not a git command. See 'git --help'.
+
+The most similar command is
+        reflog
+PS C:\Users\estudiante\Desktop\recuperar\probandoGitHub> git reflog
+0c56fe7 (HEAD) HEAD@{0}: reset: moving to 0c56fe7
+a620008 HEAD@{1}: reset: moving to a620008
+a620008 HEAD@{1}: reset: moving to a620008
+0c56fe7 (HEAD) HEAD@{0}: reset: moving to 0c56fe7
+a620008 HEAD@{1}: reset: moving to a620008
+0c56fe7 (HEAD) HEAD@{2}: commit: rep5
+5dab057 (main) HEAD@{3}: checkout: moving from 357193767ea8386be7f1329fd6c32ad79275a7a9 to 5dab057
+3571937 HEAD@{4}: checkout: moving from main to 3571937
+5dab057 (main) HEAD@{5}: commit: rep5
+a620008 HEAD@{6}: commit: rep4
+3571937 HEAD@{7}: commit: rep3
+29b61e4 HEAD@{8}: checkout: moving from 29b61e44855b2afb973c51e470ebbab49df82f11 to main
+29b61e4 HEAD@{9}: checkout: moving from main to 29b61e4
+29b61e4 HEAD@{10}: Branch: renamed refs/heads/main to refs/heads/main
+29b61e4 HEAD@{12}: Branch: renamed refs/heads/main to refs/heads/main
+:
+
+
+clase 4: 
+
+git revert id_commit borra las modificaciones realizadas en un determinado commit y deja dicho archivo
+en el area de staging para realizar un nuevo commit
+
 -->
